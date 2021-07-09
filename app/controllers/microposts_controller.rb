@@ -11,7 +11,7 @@ class MicropostsController < ApplicationController
       @pagy, @microposts = pagy(current_user.feed_microposts.order(id: :desc))
       flash.now[:danger] = 'メッセージの投稿に失敗しました。'
       render 'toppages/index'
-    endgit status
+    end
   end
 
   def destroy
